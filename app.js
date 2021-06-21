@@ -6,7 +6,6 @@ const routes = require('./routes/blogs');
 const Blog = require('./models/BlogPostModel');
 require('dotenv').config();
 const app=express();
-console.log(process.env);
 mongoose.connect(process.env.MongoDb_Url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
