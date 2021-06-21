@@ -25,8 +25,8 @@ app.set('views','./views');
 app.set('view engine','ejs');
 app.use('/blogs', routes);
 
-const hostname = '127.0.0.1';
-var port = 3000;
+
+var port = process.env.PORT;
 //List of Blogs
 app.get('/',(req,res)=>{
     Blog.find({},function(err,Blog){
@@ -43,15 +43,15 @@ app.get('*', function(req, res){
   });
 
 var server=app
-  .listen(port, hostname, () => {
-    console.log(`Server running http://${hostname}:${port}/`);
+  .listen(port, () => {
+    console.log(`Server running http://localhost:${port}/`);
   })
   .on('error', function (err) {
     if (err.code === 'EADDRINUSE') {
       port++;
       console.log('Address in use, retrying on port ' + port);
-      app.listen(port, hostname, () => {
-        console.log(`Server running http://${hostname}:${port}/`);
+      app.listen(port, () => {
+        console.log(`Server running http://localhost:${port}/`);
       });
     }
   });
