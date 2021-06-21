@@ -4,9 +4,10 @@ const path=require('path');
 const methodOverride=require("method-override");
 const routes = require('./routes/blogs');
 const Blog = require('./models/BlogPostModel');
+require('dotenv').config();
 const app=express();
-
-mongoose.connect('mongodb+srv://Abhishek:testpass@cluster0.1in2g.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
+console.log(process.env);
+mongoose.connect(process.env.MongoDb_Url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false
