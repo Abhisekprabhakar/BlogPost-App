@@ -1,4 +1,3 @@
-const http = require('http');
 const express=require('express');
 const mongoose = require('mongoose');
 const path=require('path');
@@ -57,4 +56,4 @@ var server=app
     }
   });
 
-  server.setTimeout(3600);
+  

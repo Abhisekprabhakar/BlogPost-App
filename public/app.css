@@ -218,8 +218,10 @@
          @media(max-width:500px){
           section .header-content h2{
               font-size: 5em;           
-  
           } 
+          section .header-content p{
+              font-size: 1em;
+          }
           .blog-card{
               margin-left:5px;
               width:95%;
