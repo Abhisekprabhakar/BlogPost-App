@@ -26,7 +26,7 @@ app.set('view engine','ejs');
 app.use('/blogs', routes);
 
 
-var port = process.env.PORT;
+var port = process.env.PORT||3000;
 //List of Blogs
 app.get('/',(req,res)=>{
     Blog.find({},function(err,Blog){
