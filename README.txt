@@ -3,7 +3,7 @@ How to start the project:
 2 Open the folder in vs scode or in terminal
 3 type npm install to install all node dependencies
 4 type npm start in terminal
-5 copy the port and on brower type localhost:<the port that is active>
+5 copy the port and on brower type localhost:<the port that is active/3000>
 6 any error that might occur can be found on the terminal only.
 
 
